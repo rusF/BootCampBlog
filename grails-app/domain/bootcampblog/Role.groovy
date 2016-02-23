@@ -15,12 +15,14 @@ class Role implements Serializable {
 		this()
 		this.authority = authority
 	}
+	
+	static blongsto = [user: User]
 
 	static constraints = {
-		authority blank: false, unique: true
+		
 	}
 
 	static mapping = {
-		cache true
+		authority blank: false, unique: true
 	}
 }

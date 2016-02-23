@@ -4,5 +4,5 @@ Before do |scenario|
 end
 
 After do |scenario|
-  @browser.close
+  #@browser.close
 end

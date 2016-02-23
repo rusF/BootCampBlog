@@ -4,14 +4,14 @@ require 'watir-webdriver'
 class LogIn
   include PageObject
 
-  page_url "localhost:8080\Bootcampblog"
-  text_field(:name, :id =>'user_name')
+  page_url "http://localhost:8080/BootcampBlog/login/auth"
+  text_field(:name, :id =>'username')
   text_field(:password, :id =>'password')
-  button(:submit, :name =>'submit')
+  button(:submit, :id =>'submit')
   
   def fill_in_and_submit
-  	self.name ='Test'
-    self.language ='Test'
+  	self.name ='test'
+    self.password ='test'
     self.submit
   end
 

@@ -130,9 +130,11 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'bootcampblog.User
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'bootcampblog.UserRole'
 grails.plugin.springsecurity.authority.className = 'bootcampblog.Role'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	'/':                ['permitAll'],
-	'/index':           ['permitAll'],
-	'/index.gsp':       ['permitAll'],
+	'/':                ['isAuthenticated()'],
+	'/index':           ['isAuthenticated()'],
+	'/index.gsp':       ['isAuthenticated()'],
+	'/blogPost/**':		['isAuthenticated()'],
+	'/user/**':			['isAuthenticated()'],
 	'/assets/**':       ['permitAll'],
 	'/**/js/**':        ['permitAll'],
 	'/**/css/**':       ['permitAll'],
