@@ -61,7 +61,6 @@ grails.project.dependency.resolution = {
 		
 		runtime "org.grails.plugins:resources:1.2.14"
 		compile "org.grails.plugins:spring-security-core:2.0.0"
-		compile "org.grails.plugins:spring-security-twitter:0.6.2"
         // plugins for the build system only
         build ":tomcat:7.0.55.2" // or ":tomcat:8.0.20"
 
