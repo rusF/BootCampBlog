@@ -85,6 +85,9 @@ grails.hibernate.pass.readonly = false
 // configure passing read-only to OSIV session by default, requires "singleSession = false" OSIV mode
 grails.hibernate.osiv.readonly = false
 
+grails.plugin.springsecurity.twitter.consumerKey='yO5O4wFA2vwmEi6uBPBjVATuT'
+grails.plugin.springsecurity.twitter.consumerSecret='xcBzblZcch7SyjNB3svIFVijCjMqyrNQLvYMgKVu0oKNPChiI6'
+
 environments {
     development {
         grails.logging.jul.usebridge = true

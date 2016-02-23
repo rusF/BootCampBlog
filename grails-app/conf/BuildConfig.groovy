@@ -41,19 +41,27 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenCentral()
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
-        //mavenRepo "http://repository.codehaus.org"
-        //mavenRepo "http://download.java.net/maven/2/"
-        //mavenRepo "http://repository.jboss.com/maven2/"
+		//grailsRepo "https://grails.org/plugins"
+		//mavenRepo "http://repository.codehaus.org"
+        mavenRepo "http://download.java.net/maven/2/"
+        mavenRepo "http://repository.jboss.com/maven2/"
+		mavenRepo 'http://repo.spring.io/milestone'
+		mavenRepo "http://maven.springframework.org/release/"
+
     }
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
-        // runtime 'mysql:mysql-connector-java:5.1.29'
-        // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
+        runtime 'mysql:mysql-connector-java:5.1.29'
+        runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
     }
 
     plugins {
+		
+		runtime "org.grails.plugins:resources:1.2.14"
+		compile "org.grails.plugins:spring-security-core:2.0.0"
+		compile "org.grails.plugins:spring-security-twitter:0.6.2"
         // plugins for the build system only
         build ":tomcat:7.0.55.2" // or ":tomcat:8.0.20"
 
