@@ -1,6 +1,7 @@
 package bootcampblog
 
 class TwitterUser {
+	
 
   /**
      * Twitter Username (notice that it could be modified by user, Twitter allows that)
@@ -25,7 +26,7 @@ class TwitterUser {
     /**
      * Related to main App User
      */
-    //static belongsTo = [user: User]
+    static belongsTo = [user: User]
 
     static constraints = {
         twitterId(unique: true, nullable: false)
